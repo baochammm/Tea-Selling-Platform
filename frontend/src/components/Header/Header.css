@@ -24,8 +24,12 @@
 }
 
 .header-contents p{
-    color: black;
+     color: black;
     font-size: 1vw;
+    background: rgba(255, 255, 255, 0.8); /* Translucent white background */
+    padding: 0.3vw; /* Add space around the text */
+    border-radius: 5px; /* Optional: Rounded corners */
+    display: inline-block; /* Ensures the background only covers the text */
 }
 
 .header-contents button{

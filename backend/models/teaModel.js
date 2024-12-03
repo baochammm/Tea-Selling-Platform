@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+
 const teaSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -12,22 +13,24 @@ const teaSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    image:{
+    image: {
         type: String,
         required: true
     },
-    category:{
+    category: {
         type: String,
         required: true
     },
-    countInStock:{
+    countInStock: {
         type: Number,
         required: false
     },
-    expiryDate:{
+    expiryDate: {
         type: Date,
         required: false
     }
 })
+
 const teaModel = mongoose.models.tea || mongoose.model("tea", teaSchema);
+
 export default teaModel;

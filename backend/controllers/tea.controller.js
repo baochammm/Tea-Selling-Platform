@@ -2,7 +2,7 @@ import teaModel from '../models/teaModel.js';
 import fs from 'fs';
 
 //add tea
-export async function addTea  (req, res){
+export async function addTea(req, res) {
     let image_filename = `${req.file.filename}`;
 
     const newTea = new teaModel({
@@ -29,29 +29,29 @@ export async function addTea  (req, res){
             message: "Error! Failed"
         })
     }
-    
+
 };
 
-export async function listTeas (req, res){
- try {
-    const allTea = await teaModel.find({});
-    res.json({
-        success: true,
-        data: allTea
-    })
- } catch (error) {
-    console.log(error);
-    res.json({
-        success: false,
-        message: "Error! Failed"
-    })
- }
+export async function listTeas(req, res) {
+    try {
+        const allTea = await teaModel.find({});
+        res.json({
+            success: true,
+            data: allTea
+        })
+    } catch (error) {
+        console.log(error);
+        res.json({
+            success: false,
+            message: "Error! Failed"
+        })
+    }
 };
 
-export async function deleteTea (req, res){
+export async function deleteTea(req, res) {
     try {
         const tea = await teaModel.findById(req.body.id);
-        fs.unlink(`uploads/${tea.image}`,()=> {})
+        fs.unlink(`uploads/${tea.image}`, () => { })
         await teaModel.findByIdAndDelete(req.body.id);
         res.json({
             success: true,

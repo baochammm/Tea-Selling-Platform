@@ -30,7 +30,5 @@ const teaSchema = new mongoose.Schema({
         required: false
     }
 })
-
-const teaModel = mongoose.models.tea || mongoose.model("tea", teaSchema);
-
+const teaModel = mongoose.model("tea", teaSchema) || mongoose.models.tea;
 export default teaModel;

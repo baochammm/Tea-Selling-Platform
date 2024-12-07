@@ -1,9 +1,8 @@
 import express from "express";
-// import authMiddleware from "../middleware/auth.js";
-import { placeOrder } from "../controllers/order.controller.js";
+import authMiddleware from "../middleware/auth.js";
+import { placeOrder, verifyOrder } from "../controllers/order.controller.js";
 
 const orderRouter = express.Router();
-//chua co middleware nha
-orderRouter.post("/place", placeOrder);
-
+orderRouter.post("/place", authMiddleware, placeOrder);
+orderRouter.post("/verify", verifyOrder);
 export default orderRouter;

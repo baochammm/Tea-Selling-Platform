@@ -9,24 +9,27 @@ This is a Tea Selling Platform built with React for the frontend and Node.js/Exp
 - Add Products to Cart
 - Checkout and Order History
 - Responsive Design
+- Admin Panel for Managing Orders
 
 ## Technologies Used
 
-- Frontend: React, Axios, CSS
-- Backend: Node.js, Express, MongoDB
-- Authentication: JWT, bcrypt
-- State Management: Context API
+- **Frontend**: React, Axios, CSS
+- **Backend**: Node.js, Express, MongoDB
+- **Authentication**: JWT, bcrypt
+- **State Management**: Context API
+- **Payment Processing**: Stripe
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js
-- MongoDB
+- Node.js and npm installed on your machine
+- MongoDB instance running
+- Stripe account for payment processing
 
 ### Installation
 
-1. Clone the repository:
+1. **Clone the repository**:
    ```sh
-   git clone https://github.com/your-username/tea-selling-platform.git
+   git clone https://github.com/yourusername/tea-selling-platform.git
    cd tea-selling-platform

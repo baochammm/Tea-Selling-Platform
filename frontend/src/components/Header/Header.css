@@ -13,37 +13,29 @@
     align-items: start;
     gap: 1.5vw;
     max-width: 50%;
-    bottom: 10%;
+    bottom: 35%;
     left: 6vw;
     animation: fadeIn 3s;
-
 }
 
 .header-contents h2 {
-    font-weight: 800;
-    color: rgb(3, 29, 0);
+    font-weight: 500;
+    color: black;
     font-size: max(3.5vw, 22px);
-    background: rgba(255, 255, 255, 0.479);
-    /* Translucent white background */
-    padding: 0.3vw;
-    /* Add space around the text */
-    border-radius: 5px;
-    /* Optional: Rounded corners */
-    display: inline-block;
 }
 
 .header-contents p {
     color: black;
     font-size: 1vw;
-    font-weight: 500;
-    background: rgba(255, 255, 255, 0.479);
+    background: rgba(255, 255, 255, 0.8);
     /* Translucent white background */
     padding: 0.3vw;
     /* Add space around the text */
     border-radius: 5px;
     /* Optional: Rounded corners */
     display: inline-block;
-
+    /* Ensures the background only covers the text */
+    text-shadow: 0px 5px 5px #dedede;
 }
 
 .header-contents button {
